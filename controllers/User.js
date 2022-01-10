@@ -10,8 +10,6 @@ exports.getAllUsers = (req, res) => {
                   res.send(result)
                 }
           })
-
-
 };
 exports.getUsedById = (req, res) => {
   res.send("Hello i'm User Id");
