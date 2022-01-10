@@ -17,7 +17,7 @@ db.connect((err,res)=>{
 
 app.get('/',(req,res)=>res.send("Developer Routes Api"))
 
-app.use('/api/v1/user',userRoute)
+app.use('/api/v1/users',userRoute)
 
 
 
