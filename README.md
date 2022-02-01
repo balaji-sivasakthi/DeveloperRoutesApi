@@ -1,6 +1,6 @@
 # DeveloperRoutesApi
 
-CONTENTS OF THIS FILE
+Content of the Documentation
 ---------------------
 
  * Introduction
