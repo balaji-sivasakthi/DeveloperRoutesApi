@@ -1,86 +1,46 @@
-const db = require('../db.config')
-const {escape} = require('mysql')
-
+const User = require('../models/User');
+const mongoose = require("mongoose");
 exports.getAllUsers = (req, res) => {
 
-          const sql ="SELECT * FROM users"
-          db.query(sql,(err,result,field)=>{
-                if(err){
-                   res.send({err:err.message,data:[]});
-                }else{
-                  res.status(200).json(result);
-                }
-          })
+User.find().then(result=>{
+    res.send(result)
+})
+.catch(err=>{
+    res.send(err)
+})
+
 };
 
-exports.getUsedById = (req, res) => {
-  const sql ="SELECT * FROM users WHERE id ="+escape(req.params.id)
-       
-          db.query(sql,(err,result)=>{
-                if(err){
-                   res.send({err:err.message,data:[]});
-                }else{
-                  res.status(200).json(result);
-                }
-          })
+exports.getUserById = (req, res) => {
+
+    User.findById(req.params.id).then(result=>{
+        res.send(result)
+    })
+    .catch(err=>{
+        res.send(err)
+    })
 };
 
 exports.deleteUserId = (req, res) => {
-  const sql ="DELETE FROM users WHERE ID ="+escape(req.params.id)
-       
-  db.query(sql,(err,result)=>{
-        if(err){
-           res.send({err:err.message,data:[]});
-        }else{
-          res.status(200).json(result);
-        }
-  })
-};
-
-exports.deleteAllUser = (req, res) => {
-  const sql ="DROP TABLE users"
-       
-  db.query(sql,(err,result)=>{
-        if(err){
-           res.send({err:err.message,data:[]});
-        }else{
-          res.status(200).json({"INFO":"TABLE DELETED ","RESULT":result});
-        }
-  })
+    User.findByIdAndRemove(req.params.id).then(result=>{
+        res.send(result)
+    })
+    .catch(err=>{
+        res.send(err)
+    })
+  
 };
 
 exports.addUser=async(req,res)=>{
-  //res.json(req.body)
-   const sql ="INSERT INTO users (ID,name,email,pass,mobile,qualification) VALUE ?"
-  
-  const findMax = ()=>{
-    return new Promise((res,rej)=>{
-      db.query("SELECT Max(ID) as id FROM users",(err,result)=>{
-        if(err){
-          resj(0)
-        }
-        else{
-          res(++(result[0].id))
-        }
-      })
+    const user = new User({
+        _id : new mongoose.Types.ObjectId(),
+      ...req.body
     })
-  } 
-  
-  //console.log(findMax());
+    user.save().then(result=>{
+        res.status(200).json({"msg":"Success","result":result})
+    })
+    .catch(err=>{
+        res.status(200).json({"msg":"Not db Added","result":err})
+    })
 
-  const value=[[await findMax(),
-            req.body.name,
-            req.body.email,
-            req.body.pass,
-            req.body.mobile,
-            req.body.qualification]]
-       
-            console.log(value)
-  db.query(sql,[value],(err,result)=>{
-        if(err){
-           res.send({err:err.message,data:[]});
-        }else{
-          res.status(200).json(result);
-        }
-  })
-}
+};

@@ -1,24 +1,29 @@
 const express = require('express');
+const mongoose =  require('mongoose')
+const morgan = require('morgan')
+
 require('dotenv').config()
-const db = require('./db.config')
 //route
 const userRoute =require('./routes/Users')
 
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+app.use(morgan('dev'))
 
-db.connect((err,res)=>{
-    if (err) throw err
-    console.log("connected");
+
+mongoose.connect(process.env.DB_URI)
+.then(result=>{
+    console.log('Connected');
+   
+}).catch(err=>{
+    console.log(err);
 })
-
 
 
 app.get('/',(req,res)=>res.send("Developer Routes Api"))
 
 app.use('/api/v1/users',userRoute)
-
 
 
 app.listen(process.env.PORT, () => {
