@@ -21,4 +21,4 @@ Developer Route is an E-learning Application. In This Project we want to create 
    https://latrosoft.in
 
  * To submit bug reports and feature suggestions, or track changes:
-   https://latrosoft.in
+  https://github.com/balaji-sivasakthi/DeveloperRoutesApi/issues
