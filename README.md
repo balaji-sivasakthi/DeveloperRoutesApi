@@ -15,7 +15,7 @@ Content of the Documentation
  * Configuration
  * Troubleshooting
  * FAQ
- * Maintainers
+ * Contributors
 
 INTRODUCTION
 ------------
@@ -73,7 +73,7 @@ Q: What is Developer Routes?
 A: Developer Routes is my dream project, Which helps to take over your carrer into next level.
 
 
-MAINTAINERS
+CONTRIBUTORS
 ------------
 
 <a href="https://github.com/balaji-sivasakthi/DeveloperRoutesApi/graphs/contributors">
