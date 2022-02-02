@@ -19,7 +19,7 @@ const courseSchema = new mongoose.Schema(
         required:true
     },
     playList:{
-        tyoe:Array,
+        type:Array,
         required:true
     },
     rate:{
