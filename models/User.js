@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const moment = require('moment')
 const userSchema = new mongoose.Schema(
   {
     _id:mongoose.Schema.Types.ObjectId,
@@ -25,18 +24,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    course: {
-      type: Array,
-      default:[]
-    },
-    order: {
-      type: Array,
-      default:[]
-    },
-    cart: {
-      type: Array,
-      default:[]
-    },
+    isAdmin:{
+      type:Boolean,
+      default:false
+    }
   },{timestamps:true}
 );
 
