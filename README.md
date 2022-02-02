@@ -76,10 +76,8 @@ A: Developer Routes is my dream project, Which helps to take over your carrer in
 MAINTAINERS
 ------------
 
-<a href = "https://github.com/balaji-sivasakthi/DeveloperRoutesApi/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo = balaji-sivasakthi/DeveloperRoutesApi"/>
+<a href="https://github.com/balaji-sivasakthi/DeveloperRoutesApi/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=balaji-sivasakthi/DeveloperRoutesApi" />
 </a>
-
-Made with [contributors-img](https://contrib.rocks).
 
 
