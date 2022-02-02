@@ -77,7 +77,7 @@ CONTRIBUTORS
 ------------
 
 <a href="https://github.com/balaji-sivasakthi/DeveloperRoutesApi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=balaji-sivasakthi/DeveloperRoutesApi?max=100" />
+  <img src="https://contrib.rocks/image?repo=balaji-sivasakthi/DeveloperRoutesApi" />
 </a>
 
 
