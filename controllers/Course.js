@@ -1,8 +1,8 @@
-const course = require('../models/Course');
+const Course = require('../models/Course');
 const mongoose = require("mongoose");
 exports.getAllCourses = (req, res) => {
 
-course.find().then(result=>{
+Course.find().then(result=>{
     res.send(result)
 })
 .catch(err=>{
@@ -13,7 +13,7 @@ course.find().then(result=>{
 
 exports.getCourseById = (req, res) => {
 
-    course.findById(req.params.id).then(result=>{
+    Course.findById(req.params.id).then(result=>{
         res.send(result)
     })
     .catch(err=>{
@@ -22,7 +22,7 @@ exports.getCourseById = (req, res) => {
 };
 
 exports.deleteCourseId = (req, res) => {
-    course.findByIdAndRemove(req.params.id).then(result=>{
+    Course.findByIdAndRemove(req.params.id).then(result=>{
         res.send(result)
     })
     .catch(err=>{
@@ -32,7 +32,7 @@ exports.deleteCourseId = (req, res) => {
 };
 
 exports.addCourse=async(req,res)=>{
-    const course = new course({
+    const course = new Course({
         _id : new mongoose.Types.ObjectId(),
       ...req.body
     })
