@@ -43,7 +43,7 @@ INSTALLATION
  ```
   sudo apt-get install nodejs
   git clone https://github.com/balaji-sivasakthi/DeveloperRoutesApi 
-  cd DeveloperRoutesApi npm i
+  cd /DeveloperRoutesApi npm i
  
  ```
 
