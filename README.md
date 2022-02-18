@@ -70,14 +70,13 @@ FAQ
 
 Q: What is Developer Routes?
 
-A: Developer Routes is my dream project, Which helps to take over your carrer into next level.
+A: Developer Routes is my dream project, Which helps to take over your career into next level.
 
 
 CONTRIBUTORS
 ------------
 
-<a href="https://github.com/balaji-sivasakthi/DeveloperRoutesApi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=balaji-sivasakthi/DeveloperRoutesApi" />
+<a href="https://github.com/iwint/DeveloperRoutesApi/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iwint/DeveloperRoutesApi" />
 </a>
-
 
