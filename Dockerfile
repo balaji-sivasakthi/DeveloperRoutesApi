@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
+RUN npm install -g npm@8.5.1
+
 RUN npm i
 
 EXPOSE 3000
