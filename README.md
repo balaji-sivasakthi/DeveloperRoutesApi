@@ -20,7 +20,7 @@ Content of the Documentation
 INTRODUCTION
 ------------
 
-Developer Route is an E-learning Application. In This Project we want to create some APIs for developer routes.
+Developer Route is an E-learning Application.
 
  * For more information:
    https://latrosoft.in
@@ -70,7 +70,7 @@ FAQ
 
 Q: What is Developer Routes?
 
-A: Developer Routes is my dream project, Which helps to take over your career into next level.
+A: Developer Routes is an E-learing Application Backend which is written in Nodejs
 
 
 CONTRIBUTORS
